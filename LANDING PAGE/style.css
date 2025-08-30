@@ -1,0 +1,123 @@
+/* Basic styles for the entire page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Styles for the hero section (the top part) */
+.hero {
+    height: 100vh;
+    background: url('eb4087b9-d51b-47da-a686-cec1832b0008.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* This creates a semi-transparent black overlay on the hero image */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Styles for the main heading and subheading */
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Styles for all sections below the hero */
+.section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Styles for the main buttons */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff007f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d6006c;
+}
+
+/* Styles for the artist cards using CSS Grid */
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.artist-grid div {
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.artist-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Styles for the ticket options using Flexbox */
+.ticket-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ticket-options div {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+/* Optional: Styles for the footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #121212;
+    border-top: 1px solid #333;
+}

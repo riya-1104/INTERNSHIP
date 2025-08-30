@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                   <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    
+                   </ul>
+                </nav>
+                 <div class="header-text">
+                     <p>RIYA</p>
+                     <h1>Hi,I am <span>Riya</span> I am a student at AKGEC,currently exploring the world of web 
+                        design.I'm eager to learn new technologies.<br> Take a look at my works.
+                     </h1>
+
+                 </div>
+            </div>
+            
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="1754451889615.jpg">
+                    </div>
+
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About me</h1>
+                        <p>I am a first-year student at AKGEC,pursuing B.TECH in Computer Science and 
+                            Engineering with a specialization in Artificial Intelligence and Machine Learning.
+                            I completed my intermediate studies in Bihar.<br> Beyond academics,I enjoy a variety 
+                            of simple hobbies that helps me stay curious and creative. I love reading books on
+                            new technologies,which keeps me updated on the latest trends in the tech world.
+                    </p>
+
+                    <div class="tab-titles">
+                        
+                        <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                        <p class="tab-links" onclick="opentab('education')">education</p>
+                        <p class="tab-links" onclick="opentab('resume')">resume</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>Basics of C</li> 
+                            <li>Communiation skill</li>
+                            <li>MS Excel</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024-current</span><br>BTECH</li>
+                            <li><span>2022-2024</span><br>Intermediate</li> 
+                            <li><span>2021-2022</span><br>Matriculation</li>  
+                           
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="resume">
+                        <ul>
+                            <li><span>To see my resume</span><br><a href="1754371743297.jpg">click here</a></li>
+                            
+                           
+                        </ul>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="contact">
+                <h1 class="sub-title">contact me</h1>
+                <p>contact@riya.com</p>
+                <p>912345678</p>
+            </div>
+        </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+         for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+    </body>
+</html> 
